@@ -307,7 +307,7 @@ footer{
 
       // Product cards: assign increasing data-delay for staggered effect
       document.querySelectorAll('.product-card').forEach((el, i) => {
-        el.dataset.delay = 700 + i*550; // Each card waits 0.7s + 0.55s * index for slow luxury effect
+        el.dataset.delay = 700 + i*550; // Each card waits 0.7s + 0.33s * index for slow luxury effect
         observer.observe(el);
       });
 
