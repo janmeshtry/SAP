@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samruddhi Adhesive And Polymers | Premium Lamination Adhesives</title>
+  <meta name="description" content="Premium manufacturers of lamination adhesives and paste gum solutions in Kolgaon, Palghar, Maharashtra.">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --primary: #18284e;
+  --accent: #d9a441;
+  --bg: #f4f4f7;
+  --white: #fff;
+  --text: #2d2e32;
+  --whatsapp: #25D366;
+  --shadow: 0 8px 32px #bbb0411a;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg);
+  margin:0; padding:0;
+  color:var(--text);
+}
+.container{ max-width: 1100px; margin: auto; padding: 24px;}
+header{
+  background: var(--primary);
+  color: var(--white);
+  padding:28px 0 18px 0;
+  text-align:center;
+  position:relative;
+  will-change:opacity,transform;
+}
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  gap: 12px;
+  min-height: 54px;
+}
+.site-logo {
+  height:54px;
+  width:auto;
+  border-radius:12px;
+  box-shadow: var(--shadow);
+  background:var(--white);
+  object-fit:contain;
+}
+.brand{
+  font-size:2.2rem;
+  font-weight:700;
+  letter-spacing:1px;
+  color:var(--accent);
+}
+.tagline{
+  font-size:1.18rem;
+  margin-top:0; margin-bottom:0;
+}
+nav{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  background: var(--white);
+  padding: 8px 0;
+  font-weight: 500;
+  box-shadow:0 2px 16px #d9a44109;
+  will-change:opacity,transform;
+}
+nav a{color:var(--primary); text-decoration:none; padding:6px 12px; border-radius:4px; transition:background 0.2s;}
+nav a:hover{background:var(--accent); color:var(--white);}
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0 40px 0;
+  text-align: center;
+  background: linear-gradient(95deg, var(--bg) 0%, #fff9f1 77%);
+  border-radius: 10px;
+  margin-bottom:42px;
+  box-shadow:var(--shadow);
+  min-height:220px;
+  will-change:opacity,transform;
+}
+.hero h1{ font-size:2.6rem; margin:0;}
+.hero p{ font-size:1.2rem; margin: 12px 0 0 0;}
+.indiamart-link{
+  display:inline-block;
+  margin-top:20px;
+  background: var(--accent);
+  color: var(--white);
+  padding:9px 30px;
+  font-weight: bold;
+  border-radius:4px;
+  text-decoration: none;
+  font-size: 1.13rem;
+  box-shadow: 0 0 0 0 var(--accent);
+  transition: background 0.15s, box-shadow 0.38s;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index:1;
+  overflow:hidden;
+}
+.indiamart-link:hover{
+  background:#b88a30;
+  box-shadow:0 4px 16px #d9a44157;
+}
+/* Animation keyframes */
+.animate-on-scroll, .product-card, .whatsapp-link, footer {
+  opacity:0;
+  transform: translateY(80px);
+  transition: opacity 1.5s cubic-bezier(.5,.12,.32,1), transform 1.5s cubic-bezier(.5,.12,.32,1);
+}
+.animate-on-scroll.visible, .product-card.visible, .whatsapp-link.visible, footer.visible {
+  opacity:1;
+  transform: translateY(0);
+  pointer-events:auto;
+}
+/* Product cards with floating animation */
+.products-section{
+  margin:44px 0;
+}
+.products-section h2{
+  color: var(--primary);
+  text-align:center;
+  margin-bottom:26px;
+  font-size:1.95rem;
+  letter-spacing: .5px;
+  will-change:opacity,transform;
+}
+.products{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 28px;
+  margin-bottom:18px;
+}
+.product-card{
+  background: var(--white);
+  border-radius: 14px;
+  padding: 28px 18px;
+  box-shadow: 0 2px 16px #bba32216;
+  border-left: 4px solid var(--accent);
+  transition: box-shadow 0.32s, transform 0.32s;
+  will-change:opacity,transform;
+  animation: none;
+}
+.product-card.visible {
+  animation: floatCard 3.2s cubic-bezier(.72,.13,.51,.99) infinite alternate 2s;
+  transition-delay: var(--delay, 0s);
+}
+@keyframes floatCard { 0% { transform:translateY(0);} 100% { transform:translateY(-10px);} }
+.product-card h3{margin-top:0; color:var(--primary); font-size:1.14rem;}
+/* Contact section... */
+.contact-section{
+  background: var(--white);
+  border-radius:12px;
+  padding:28px 18px;
+  margin:32px 0;
+  box-shadow:0 3px 10px #ddc25330;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:26px;
+  align-items: flex-start;
+}
+.contact-details{
+  flex:1;
+  min-width: 280px;
+}
+.contact-details h2{
+  color: var(--accent);
+  margin-top:0;
+}
+.address, .gst, .proprietor, .contact-phone {margin-bottom:8px;}
+/* WhatsApp button animated */
+.whatsapp-link{
+  display: inline-flex;
+  align-items: center;
+  gap:8px;
+  background: var(--whatsapp);
+  color: var(--white);
+  padding:10px 28px;
+  font-weight: bold;
+  border-radius:4px;
+  text-decoration: none;
+  font-size:1.09rem;
+  margin-top:16px;
+  transition: background 0.18s, transform 0.14s;
+  box-shadow: 0 2px 10px #25D36633;
+  border: none;
+}
+.whatsapp-link.visible{
+  transition-delay: .5s;
+}
+.whatsapp-link:hover{
+  background: #169c4a;
+  transform: scale(1.045);
+}
+.whatsapp-icon{
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink:0;
+}
+@media (max-width:800px){
+  .hero h1{ font-size:1.7rem;}
+  .container{padding: 4vw;}
+}
+@media (max-width:600px){
+  .contact-section{ flex-direction: column; }
+  .products{ grid-template-columns: 1fr;}
+}
+footer{
+  text-align:center;
+  background:var(--primary);
+  color:var(--white);
+  padding:16px 8px;
+  font-size: 0.98rem;
+  margin-top:50px;
+  letter-spacing:.04em;
+}
+  </style>
+</head>
+<body>
+  <header class="animate-on-scroll">
+    <div class="logo-row">
+     <img class="site-logo" src="SAP.png" alt="SAP Logo"/>
+    <span class="brand">Samruddhi Adhesive And Polymers</span>
+    </div>
+    <div class="tagline">Premium Lamination Adhesives | Made in Maharashtra</div>
+  </header>
+  <nav class="animate-on-scroll">
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank">Indiamart</a>
+  </nav>
+  <div class="container">
+    <section class="hero animate-on-scroll">
+      <h1>Advanced Lamination & Adhesive Solutions</h1>
+      <p>Manufacturers of <b>Paste Gum, Lamination Adhesives, Bopp Adhesives, PVC Adhesives, and more</b> — trusted by brands across Maharashtra.</p>
+      <a class="indiamart-link" href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank">Buy on IndiaMART</a>
+    </section>
+
+    <section id="products" class="products-section animate-on-scroll">
+      <h2>Our Product Range</h2>
+      <div class="products">
+        <div class="product-card"> <h3>Paste Gum</h3><p>High-tack, reliable gum for varied applications including lamination.</p> </div>
+        <div class="product-card"> <h3>Paper Plate Lamination Gum</h3><p>Special formulation for superior lamination of paper plates with strong adhesion.</p> </div>
+        <div class="product-card"> <h3>BOPP Lamination Adhesive</h3><p>Premium adhesives for BOPP lamination with excellent bond strength and clarity.</p> </div>
+        <div class="product-card"> <h3>PVC Lamination Adhesive</h3><p>Expertly designed adhesive ensuring long-lasting PVC lamination.</p> </div>
+        <div class="product-card"> <h3>Paper Lamination Adhesive</h3><p>Adhesive solution for high-speed paper lamination machinery.</p> </div>
+        <div class="product-card"> <h3>Lamination Adhesive</h3><p>Versatile adhesives for multiple lamination purposes in packaging & manufacturing.</p> </div>
+        <div class="product-card"> <h3>Film Laminating Adhesives</h3><p>Advanced film adhesives for flexible and durable lamination.</p> </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section animate-on-scroll">
+      <div class="contact-details">
+        <h2>Reach Us</h2>
+        <div class="address"><b>Address:</b> Plot No 39/2 Kolgaon Road Genesis Industrial Complex, Palghar-401404, Maharashtra, India</div>
+        <div class="proprietor"><b>Proprietor:</b> Mr. Ganesh Govind Sankhe</div>
+        <div class="contact-phone"><b>Contact:</b>
+          <a href="tel:+919890273944" style="color: var(--primary); text-decoration:underline;">+91 9890273944</a>
+        </div>
+        <div class="gst"><b>GST:</b> 27BBBPS5011E1Z0</div>
+        <a class="indiamart-link" href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank">View on IndiaMART</a>
+        <br>
+        <a class="whatsapp-link" href="https://wa.me/919890273944" target="_blank">
+          <span class="whatsapp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white">
+              <circle cx="16" cy="16" r="16" fill="#25D366"/>
+              <path d="M22.7 18.5c-.3-.2-1.8-.9-2.1-1- .3-.1-.5-.2-.7.2s-.8,1-1,1.2c-.1.1-.3.1-.5.1-1.1-.5-2-1.6-2.5-2.3-.2-.3,0-.4.2-.7.2-.2.3-.4.5-.6.2-.2.1-.4,0-.7s-.8-2 -1-2.6c-.3-.6-.5-.6-.7-.7h-.6c-.2,0-.5.1-.7.3-.7.7-1,1.5-1,2.4 0,1.4 1,2.9 2.2,4 1.2 1 2.8,1.7 4.2,1.6 .8,0 1.7-.5 2.1-1 .2-.3.2-.6,0-.8z" fill="#fff"/>
+            </svg>
+          </span>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </section>
+  </div>
+  <footer class="animate-on-scroll">
+    &copy; 2025 Samruddhi Adhesive And Polymers. Premium Adhesive Manufacturer in Maharashtra.
+  </footer>
+  <script>
+    // On-scroll reveal for .animate-on-scroll & .product-card with slow staggered interval
+    function revealOnScroll() {
+      const revealClass = 'visible';
+      const observer = new window.IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            if(entry.target.classList.contains('product-card')) {
+              setTimeout(()=>{
+                entry.target.classList.add(revealClass);
+              }, entry.target.dataset.delay || 0);
+            } else {
+              entry.target.classList.add(revealClass);
+            }
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 } );
+
+      // Animate header/nav/hero/etc.
+      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+      // Product cards: assign increasing data-delay for staggered effect
+      document.querySelectorAll('.product-card').forEach((el, i) => {
+        el.dataset.delay = 700 + i*550; // Each card waits 0.7s + 0.55s * index for slow luxury effect
+        observer.observe(el);
+      });
+
+      // WhatsApp button appears a moment after contact-section
+      const contactObs = new IntersectionObserver((entries, observer2)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            setTimeout(()=>{
+              const wa = document.querySelector('.whatsapp-link');
+              if(wa) wa.classList.add('visible');
+            },1500); // slower appearance after contact is visible
+            observer2.disconnect();
+          }
+        });
+      }, {threshold:0.2});
+      if(document.querySelector('.contact-section'))
+        contactObs.observe(document.querySelector('.contact-section'));
+    }
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
+</html>
