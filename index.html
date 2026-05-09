@@ -4,362 +4,293 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Samruddhi Adhesive And Polymers | Premium Lamination Adhesives</title>
-  <meta name="description" content="Premium manufacturers of lamination adhesives and paste gum solutions in Kolgaon, Palghar, Maharashtra.">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <style>
-:root{
-  --primary: #18284e;
-  --accent: #d9a441;
-  --bg: #f4f4f7;
-  --white: #fff;
-  --text: #2d2e32;
-  --whatsapp: #25D366;
-  --shadow: 0 8px 32px #bbb0411a;
-}
-body{
-  font-family: 'Roboto', sans-serif;
-  background: var(--bg);
-  margin:0; padding:0;
-  color:var(--text);
-}
-.container{ max-width: 1100px; margin: auto; padding: 24px;}
-.header-anim {
-  opacity:0;
-  transform: translateY(80px);
-  transition: opacity 1.2s cubic-bezier(.5,.12,.32,1), transform 1.2s cubic-bezier(.5,.12,.32,1);
-  will-change:opacity,transform;
-}
-.header-anim.visible {
-  opacity:1;
-  transform:translateY(0);
-  pointer-events:auto;
-}
-header{
-  background: var(--primary);
-  color: var(--white);
-  padding:28px 0 18px 0;
-  text-align:center;
-  position:relative;
-  will-change:opacity,transform;
-}
-.logo-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-  gap: 12px;
-  min-height: 54px;
-}
-.site-logo {
-  height:54px;
-  width:auto;
-  border-radius:12px;
-  box-shadow: var(--shadow);
-  background:var(--white);
-  object-fit:contain;
-}
-.brand{
-  font-size:2.2rem;
-  font-weight:700;
-  letter-spacing:1px;
-  color:var(--accent);
-}
-.tagline{
-  font-size:1.18rem;
-  margin-top:0; margin-bottom:0;
-}
-nav{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  background: var(--white);
-  padding: 8px 0;
-  font-weight: 500;
-  box-shadow:0 2px 16px #d9a44109;
-  will-change:opacity,transform;
-}
-nav a{color:var(--primary); text-decoration:none; padding:6px 12px; border-radius:4px; transition:background 0.2s;}
-nav a:hover{background:var(--accent); color:var(--white);}
-.hero{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 54px 0 40px 0;
-  text-align: center;
-  background: linear-gradient(95deg, var(--bg) 0%, #fff9f1 77%);
-  border-radius: 10px;
-  margin-bottom:42px;
-  box-shadow:var(--shadow);
-  min-height:220px;
-  will-change:opacity,transform;
-}
-.hero h1{ font-size:2.6rem; margin:0;}
-.hero p{ font-size:1.2rem; margin: 12px 0 0 0;}
-.indiamart-link{
-  display:inline-block;
-  margin-top:20px;
-  background: var(--accent);
-  color: var(--white);
-  padding:9px 30px;
-  font-weight: bold;
-  border-radius:4px;
-  text-decoration: none;
-  font-size: 1.13rem;
-  box-shadow: 0 0 0 0 var(--accent);
-  transition: background 0.15s, box-shadow 0.38s;
-  border: none;
-  outline: none;
-  position: relative;
-  z-index:1;
-  overflow:hidden;
-}
-.indiamart-link:hover{
-  background:#b88a30;
-  box-shadow:0 4px 16px #d9a44157;
-}
-/* Animation keyframes */
-.animate-on-scroll, .product-card, .whatsapp-link, footer {
-  opacity:0;
-  transform: translateY(80px);
-  transition: opacity 1.5s cubic-bezier(.5,.12,.32,1), transform 1.5s cubic-bezier(.5,.12,.32,1);
-}
-.animate-on-scroll.visible, .product-card.visible, .whatsapp-link.visible, footer.visible {
-  opacity:1;
-  transform: translateY(0);
-  pointer-events:auto;
-}
-/* Product Range header animated on load only (no scroll) */
-.productrange-title {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1.1s cubic-bezier(.5,.12,.32,1), transform 1.1s cubic-bezier(.5,.12,.32,1);
-}
-.productrange-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Product cards with floating animation */
-.products-section{
-  margin:44px 0;
-}
-.products-section h2{
-  color: var(--primary);
-  text-align:center;
-  margin-bottom:26px;
-  font-size:1.95rem;
-  letter-spacing: .5px;
-}
-.products{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 28px;
-  margin-bottom:18px;
-}
-.product-card{
-  background: var(--white);
-  border-radius: 14px;
-  padding: 28px 18px;
-  box-shadow: 0 2px 16px #bba32216;
-  border-left: 4px solid var(--accent);
-  transition: box-shadow 0.32s, transform 0.32s;
-  will-change:opacity,transform;
-  animation: none;
-}
-.product-card.visible {
-  animation: floatCard 3.2s cubic-bezier(.72,.13,.51,.99) infinite alternate 2s;
-  transition-delay: var(--delay, 0s);
-}
-@keyframes floatCard { 0% { transform:translateY(0);} 100% { transform:translateY(-10px);} }
-.product-card h3{margin-top:0; color:var(--primary); font-size:1.14rem;}
-/* Contact section... */
-.contact-section{
-  background: var(--white);
-  border-radius:12px;
-  padding:28px 18px;
-  margin:32px 0;
-  box-shadow:0 3px 10px #ddc25330;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap:26px;
-  align-items: flex-start;
-}
-.contact-details{
-  flex:1;
-  min-width: 280px;
-}
-.contact-details h2{
-  color: var(--accent);
-  margin-top:0;
-}
-.address, .gst, .proprietor, .contact-phone {margin-bottom:8px;}
-/* WhatsApp button animated */
-.whatsapp-link{
-  display: inline-flex;
-  align-items: center;
-  gap:8px;
-  background: var(--whatsapp);
-  color: var(--white);
-  padding:10px 28px;
-  font-weight: bold;
-  border-radius:4px;
-  text-decoration: none;
-  font-size:1.09rem;
-  margin-top:16px;
-  transition: background 0.18s, transform 0.14s;
-  box-shadow: 0 2px 10px #25D36633;
-  border: none;
-}
-.whatsapp-link.visible{
-  transition-delay: .5s;
-}
-.whatsapp-link:hover{
-  background: #169c4a;
-  transform: scale(1.045);
-}
-.whatsapp-icon{
-  width: 23px;
-  height: 23px;
-  display: inline-block;
-  vertical-align: middle;
-  flex-shrink:0;
-}
-@media (max-width:800px){
-  .hero h1{ font-size:1.7rem;}
-  .container{padding: 4vw;}
-}
-@media (max-width:600px){
-  .contact-section{ flex-direction: column; }
-  .products{ grid-template-columns: 1fr;}
-}
-footer{
-  text-align:center;
-  background:var(--primary);
-  color:var(--white);
-  padding:16px 8px;
-  font-size: 0.98rem;
-  margin-top:50px;
-  letter-spacing:.04em;
-}
-  </style>
+  <meta name="description" content="Premium manufacturers of lamination adhesives, paste gum, and polymer solutions in Kolgaon, Palghar, Maharashtra.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <header class="header-anim">
-    <div class="logo-row">
-     <img class="site-logo" src="SAP.png" alt="SAP Logo"/>
-    <span class="brand">Samruddhi Adhesive And Polymers</span>
-    </div>
-    <div class="tagline">Premium Lamination Adhesives | Made in Maharashtra</div>
-  </header>
-  <nav class="animate-on-scroll">
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-    <a href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank">Indiamart</a>
-  </nav>
-  <div class="container">
-    <section class="hero animate-on-scroll">
-      <h1>Advanced Lamination & Adhesive Solutions</h1>
-      <p>Manufacturers of <b>Paste Gum, Lamination Adhesives, Bopp Adhesives, PVC Adhesives, and more</b> — trusted by brands across India.</p>
-       <a class="indiamart-link" href="tel:+919890273944">
-    📞 Call for Orders
-      </a>
-      <a class="indiamart-link" href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank">Buy on IndiaMART</a>
-    </section>
-    <section id="products" class="products-section">
-      <h2 class="productrange-title">Our Product Range</h2>
-      <div class="products">
-        <div class="product-card">
-      <h3>Water based Adhesives for Book Binding and Packaging Industry</h3>
-      <p>Viscous and effective for a wide range of applications including paper products, wallpaper, handicrafts, furniture, and more.</p>
-    </div>
-        <div class="product-card"> <h3>Paste Gum</h3><p>High-tack, reliable gum for varied applications including lamination.</p> </div>
-        <div class="product-card"> <h3>Paper Plate Lamination Gum</h3><p>Special formulation for superior lamination of paper plates with strong adhesion.</p> </div>
-        <div class="product-card"> <h3>BOPP Lamination Adhesive</h3><p>Premium adhesives for BOPP lamination with excellent bond strength and clarity.</p> </div>
-        <div class="product-card"> <h3>PVC Lamination Adhesive</h3><p>Expertly designed adhesive ensuring long-lasting PVC lamination.</p> </div>
-        <div class="product-card"> <h3>Paper Lamination Adhesive</h3><p>Adhesive solution for high-speed paper lamination machinery.</p> </div>
-        <div class="product-card"> <h3>Lamination Adhesive</h3><p>Versatile adhesives for multiple lamination purposes in packaging & manufacturing.</p> </div>
-        <div class="product-card"> <h3>Film Laminating Adhesives</h3><p>Advanced film adhesives for flexible and durable lamination.</p> </div>
-      </div>
-    </section>
-    <section id="contact" class="contact-section animate-on-scroll">
-      <div class="contact-details">
-        <h2>Reach Us</h2>
-        <div class="address"><b>Address:</b> Plot No 39/2 Kolgaon Road Genesis Industrial Complex, Palghar-401404, Maharashtra, India</div>
-        <div class="proprietor"><b>Proprietor:</b> Mr. Ganesh Govind Sankhe</div>
-        <div class="contact-phone"><b>Contact:</b>
-          <a href="tel:+919890273944" style="color: var(--primary); text-decoration:underline;">+91 9890273944</a>
-        </div>
-        <div class="gst"><b>GST:</b> 27BBBPS5011E1Z0</div>
-        <a class="indiamart-link" href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank">View on IndiaMART</a>
-        <br>
-        <a class="whatsapp-link" href="https://wa.me/919890273944" target="_blank">
-          <span class="whatsapp-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white">
-              <circle cx="16" cy="16" r="16" fill="#25D366"/>
-              <path d="M22.7 18.5c-.3-.2-1.8-.9-2.1-1- .3-.1-.5-.2-.7.2s-.8,1-1,1.2c-.1.1-.3.1-.5.1-1.1-.5-2-1.6-2.5-2.3-.2-.3,0-.4.2-.7.2-.2.3-.4.5-.6.2-.2.1-.4,0-.7s-.8-2 -1-2.6c-.3-.6-.5-.6-.7-.7h-.6c-.2,0-.5.1-.7.3-.7.7-1,1.5-1,2.4 0,1.4 1,2.9 2.2,4 1.2 1 2.8,1.7 4.2,1.6 .8,0 1.7-.5 2.1-1 .2-.3.2-.6,0-.8z" fill="#fff"/>
-            </svg>
-          </span>
-          Chat on WhatsApp
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#hero" class="brand-link">
+          <img src="assets/SAP.png" alt="Samruddhi Adhesive And Polymers Logo" class="site-logo"/>
+          <div class="brand-text-wrapper">
+            <span class="brand-text-main">SAMRUDDHI</span>
+            <span class="brand-text-sub">Adhesive And Polymers</span>
+          </div>
         </a>
       </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank" class="btn-outline">IndiaMART</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero fade-in">
+      <div class="hero-content">
+        <span class="badge">Made in Maharashtra | 5.0 ★ IndiaMART Rating</span>
+        <h1 class="hero-brand">Samruddhi Adhesive And Polymers</h1>
+        <h2 class="hero-tagline">Advanced Lamination & Polymer Solutions</h2>
+        <p>Premium manufacturers of <strong>Paste Gum, BOPP Adhesives, PVC Adhesives, and Water Based Adhesives</strong> — trusted by packaging and manufacturing brands across India.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="tel:+919890273944">📞 Call for Orders</a>
+          <a class="btn-secondary" href="https://www.indiamart.com/samruddhi-adhesive-and-polymers/" target="_blank">Buy on IndiaMART</a>
+        </div>
+      </div>
     </section>
-  </div>
-  <footer class="animate-on-scroll">
-    &copy; 2025 Samruddhi Adhesive And Polymers. Premium Adhesive Manufacturer in Maharashtra.
+
+    <section id="products" class="products-section container">
+      <div class="section-header fade-in">
+        <h2>Our Product Range</h2>
+        <p>High-tack, reliable formulations for industrial applications. Directly from our manufacturing unit.</p>
+      </div>
+      
+      <div class="products-grid">
+        
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="Water based Adhesives" class="product-image">
+              <div class="product-content">
+                <h3>Water based Adhesives</h3>
+                <p>Viscous and effective for a wide range of applications including paper products, wallpaper, handicrafts, furniture, and more.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>Water based Adhesives</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20Water%20based%20Adhesives." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="Paste Gum" class="product-image">
+              <div class="product-content">
+                <h3>Paste Gum</h3>
+                <p>High-tack, reliable gum for varied applications including complex lamination processes.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>Paste Gum</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20Paste%20Gum." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="Paper Plate Lamination Gum" class="product-image">
+              <div class="product-content">
+                <h3>Paper Plate Lamination Gum</h3>
+                <p>Special formulation for superior lamination of paper plates with strong adhesion.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>Paper Plate Lamination Gum</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20Paper%20Plate%20Lamination%20Gum." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="BOPP Lamination Adhesive" class="product-image">
+              <div class="product-content">
+                <h3>BOPP Lamination Adhesive</h3>
+                <p>Premium adhesives for BOPP lamination with excellent bond strength and clarity.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>BOPP Lamination Adhesive</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20BOPP%20Lamination%20Adhesive." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="PVC Lamination Adhesive" class="product-image">
+              <div class="product-content">
+                <h3>PVC Lamination Adhesive</h3>
+                <p>Expertly designed adhesive ensuring long-lasting and durable PVC lamination.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>PVC Lamination Adhesive</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20PVC%20Lamination%20Adhesive." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="Paper Lamination Adhesive" class="product-image">
+              <div class="product-content">
+                <h3>Paper Lamination Adhesive</h3>
+                <p>Adhesive solution optimized for high-speed paper lamination machinery.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>Paper Lamination Adhesive</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20Paper%20Lamination%20Adhesive." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="Lamination Adhesive" class="product-image">
+              <div class="product-content">
+                <h3>Lamination Adhesive</h3>
+                <p>Versatile adhesives for multiple lamination purposes in packaging & manufacturing.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>Lamination Adhesive</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20Lamination%20Adhesive." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card stagger-in">
+          <div class="product-card-inner">
+            <div class="product-card-front">
+              <img src="assets/SAP.png" alt="Film Laminating Adhesives" class="product-image">
+              <div class="product-content">
+                <h3>Film Laminating Adhesives</h3>
+                <p>Advanced film adhesives tailored for flexible, long-lasting, and durable lamination.</p>
+                <span class="flip-hint">Tap to Enquire ↺</span>
+              </div>
+            </div>
+            <div class="product-card-back">
+              <h3>Film Laminating Adhesives</h3>
+              <p>Get a quote or ask us a question about this product directly.</p>
+              <div class="back-actions">
+                <a class="btn-primary no-flip" href="tel:+919890273944">📞 Call Now</a>
+                <a class="btn-whatsapp no-flip" href="https://wa.me/919890273944?text=Hello,%20I%20want%20to%20enquire%20about%20your%20Film%20Laminating%20Adhesives." target="_blank">WhatsApp Us</a>
+              </div>
+              <span class="flip-hint">Tap to go back ↺</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+   <section id="reviews" class="reviews-section container fade-in">
+      <div class="section-header">
+        <h2>Trusted by Businesses</h2>
+        <p>Rated 5.0/5 ★ on IndiaMART</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Excellent quality product. We use their PVC Lamination adhesive for our industrial needs and the bond strength is outstanding."</p>
+          <p class="review-author">— Raj Hotchandani, Ulhasnagar, Maharashtra</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"We have been sourcing paste gum for our packaging line for over two years. The consistency across batches is remarkable, and delivery is always on time."</p>
+          <p class="review-author">— Vikram Desai, Vasai, Maharashtra</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Their BOPP lamination adhesive provides crystal clear results without any bubbling issues. Genuine people to work with and highly responsive."</p>
+          <p class="review-author">— Anil Sharma, Mumbai, Maharashtra</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section container fade-in">
+      <div class="contact-card">
+        <div class="contact-info">
+          <h2>Reach Us</h2>
+          <p class="company-name">Samruddhi Adhesive And Polymers</p>
+          <ul class="contact-list">
+            <li><strong>Proprietor:</strong> Mr. Ganesh Govind Sankhe</li>
+            <li><strong>Address:</strong> Plot No 39/2 Kolgaon Road Genesis Industrial Complex, Palghar-401404, Maharashtra, India</li>
+            <li><strong>GST:</strong> 27BBBPS5011E1Z0</li>
+            <li><strong>Contact:</strong> <a href="tel:+919890273944" class="text-link">+91 9890273944</a></li>
+          </ul>
+          <div class="contact-actions">
+            <a class="btn-whatsapp" href="https://wa.me/919890273944" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white" class="wa-icon">
+                <circle cx="16" cy="16" r="16" fill="#25D366"/>
+                <path d="M22.7 18.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8,1-1,1.2c-.1.1-.3.1-.5.1-1.1-.5-2-1.6-2.5-2.3-.2-.3,0-.4.2-.7.2-.2.3-.4.5-.6.2-.2.1-.4,0-.7s-.8-2 -1-2.6c-.3-.6-.5-.6-.7-.7h-.6c-.2,0-.5.1-.7.3-.7.7-1,1.5-1,2.4 0,1.4 1,2.9 2.2,4 1.2 1 2.8,1.7 4.2,1.6 .8,0 1.7-.5 2.1-1 .2-.3.2-.6,0-.8z" fill="#fff"/>
+              </svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Samruddhi Adhesive And Polymers. Premium Adhesive Manufacturer in Maharashtra.</p>
+    </div>
   </footer>
-  <script>
-    // Animate header and "Our Product Range" heading on page load only
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        var header = document.querySelector('.header-anim');
-        if(header) header.classList.add('visible');
-      }, 200); // header animate in
-      setTimeout(function() {
-        var title = document.querySelector('.productrange-title');
-        if(title) title.classList.add('visible');
-      }, 900); // delay matches one-section-after-hero
-    });
-    // On-scroll reveal for .animate-on-scroll & .product-card with slow staggered interval
-    function revealOnScroll() {
-      const revealClass = 'visible';
-      const observer = new window.IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            if(entry.target.classList.contains('product-card')) {
-              setTimeout(()=>{
-                entry.target.classList.add(revealClass);
-              }, entry.target.dataset.delay || 0);
-            } else {
-              entry.target.classList.add(revealClass);
-            }
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 } );
-      // Animate nav/hero/etc.
-      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-      // Product cards: assign increasing data-delay for staggered effect
-      document.querySelectorAll('.product-card').forEach((el, i) => {
-        el.dataset.delay = 50 + i*100;
-        observer.observe(el);
-      });
-      // WhatsApp button appears a moment after contact-section
-      const contactObs = new IntersectionObserver((entries, observer2)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
-            setTimeout(()=>{
-              const wa = document.querySelector('.whatsapp-link');
-              if(wa) wa.classList.add('visible');
-            },1500);
-            observer2.disconnect();
-          }
-        });
-      }, {threshold:0.2});
-      if(document.querySelector('.contact-section'))
-        contactObs.observe(document.querySelector('.contact-section'));
-    }
-    window.addEventListener('DOMContentLoaded', revealOnScroll);
-  </script>
+
 </body>
 </html>
