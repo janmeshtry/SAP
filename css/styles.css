@@ -384,6 +384,9 @@ footer { background: var(--primary); color: #94a3b8; text-align: center; padding
 /* =========================================
    Mobile Responsiveness
    ========================================= */
+/* =========================================
+   Mobile Responsiveness
+   ========================================= */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hero { padding: 6rem 5% 4rem; }
